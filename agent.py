@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 
-from livekit import agents
-from livekit.agents import AgentSession, Agent, RoomInputOptions
+from livekit.agents import AgentSession, Agent, RoomInputOptions, JobContext, cli, WorkerOptions
 from livekit.plugins import (
     noise_cancellation,
 )
@@ -29,7 +28,7 @@ class Assistant(Agent):
         
 
 
-async def entrypoint(ctx: agents.JobContext):
+async def entrypoint(ctx: JobContext):
     session = AgentSession(
         
     )
@@ -54,4 +53,4 @@ async def entrypoint(ctx: agents.JobContext):
 
 
 if __name__ == "__main__":
-    agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
+    cli.run_app(WorkerOptions(entrypoint_fnc=entrypoint))
