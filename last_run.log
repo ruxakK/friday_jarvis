@@ -1,0 +1,11 @@
+Usage: agent.py [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  connect         Connect to a specific room
+  console         Start a new chat
+  dev             Start the worker in development mode
+  download-files  Download plugin dependency files
+  start           Start the worker in production mode.
